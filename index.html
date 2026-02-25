@@ -221,7 +221,7 @@ body{
 <script>
 
 /* arquivos */
-const fotos=[...Array(15)].map((_,i)=>"foto"+(i+1)+".jpg");
+const fotos=[...Array(15)].map((_,i)=>"foto"+(i+1)+".jfif");
 const videos=[...Array(9)].map((_,i)=>"video"+(i+1)+".mp4");
 
 let media=[...fotos.map(f=>({type:'img',src:f})),
@@ -238,7 +238,7 @@ function createItem(m){
         div.innerHTML=`<img src="${m.src}" onclick="openViewer('${m.src}','img')">`;
     }else{
         div.innerHTML=`
-        <video poster="foto1.jpg" onclick="openViewer('${m.src}','video')"></video>
+        <video poster="foto1.jfif" onclick="openViewer('${m.src}','video')"></video>
         <div class="video-overlay"></div>
         <div class="play-center">▶</div>
         <div class="duration">2:${Math.floor(Math.random()*60).toString().padStart(2,'0')}</div>
